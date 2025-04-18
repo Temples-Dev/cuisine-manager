@@ -54,7 +54,7 @@
 
 5. **Start the Dev Server**
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 ---
