@@ -1,7 +1,3 @@
-Sure! Here's a concise and clear `README.md` for your **Cuisine Manager** project:
-
----
-
 # 🍽️ Cuisine Manager
 
 **Cuisine Manager** is a simple full-stack CRUD app built with **Next.js**, **tRPC**, **Drizzle ORM**, and **Tailwind CSS**. It allows users to manage a list of world cuisines, including creating, reading, updating, and deleting cuisine entries.
@@ -42,7 +38,7 @@ Sure! Here's a concise and clear `README.md` for your **Cuisine Manager** projec
 
 2. **Install Dependencies**
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. **Set Up Environment Variables**
@@ -53,7 +49,7 @@ Sure! Here's a concise and clear `README.md` for your **Cuisine Manager** projec
 
 4. **Run Migrations (if using Drizzle)**
    ```bash
-   npx drizzle-kit push
+  pnpm run db:push
    ```
 
 5. **Start the Dev Server**
