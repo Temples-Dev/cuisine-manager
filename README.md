@@ -1,29 +1,102 @@
-# Create T3 App
+Sure! Here's a concise and clear `README.md` for your **Cuisine Manager** project:
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+---
 
-## What's next? How do I make an app with this?
+# 🍽️ Cuisine Manager
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+**Cuisine Manager** is a simple full-stack CRUD app built with **Next.js**, **tRPC**, **Drizzle ORM**, and **Tailwind CSS**. It allows users to manage a list of world cuisines, including creating, reading, updating, and deleting cuisine entries.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+---
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## 🚀 Features
 
-## Learn More
+- View all cuisines with images and details  
+- View a single cuisine by ID  
+- Add a new cuisine using a form  
+- Update existing cuisine entries  
+- Delete cuisines from the list  
+- Fully responsive, clean Tailwind-based UI  
+- Type-safe APIs via `tRPC`  
+- PostgreSQL backend powered by `Drizzle ORM`  
+- Supabase support for database hosting  
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+---
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## 🧱 Tech Stack
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/)
+- [tRPC](https://trpc.io/)
+- [Drizzle ORM](https://orm.drizzle.team/)
+- [Supabase](https://supabase.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-## How do I deploy this?
+---
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## 📦 Setup Instructions
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/cuisine-manager.git
+   cd cuisine-manager
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set Up Environment Variables**
+   Create a `.env.local` file and add your database credentials:
+   ```env
+   DATABASE_URL=your_postgres_connection_url
+   ```
+
+4. **Run Migrations (if using Drizzle)**
+   ```bash
+   npx drizzle-kit push
+   ```
+
+5. **Start the Dev Server**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 📄 Database Schema
+
+Cuisines are stored with the following fields:
+
+- `id` (auto-increment)
+- `name`
+- `description`
+- `originCountry`
+- `image` (URL)
+- `isVegetarianFriendly` (boolean)
+
+---
+
+## 🖼️ Image Configuration
+
+To allow loading external cuisine images, make sure to configure allowed domains in `next.config.js`:
+
+```js
+images: {
+  domains: ['your-image-host.com', 'another-image-source.com'],
+},
+```
+
+---
+
+## 🛠️ Future Improvements
+
+- Form validation and toast notifications  
+- Filter by country or vegetarian-friendly options  
+- Pagination and search  
+- File/image upload for custom cuisines  
+
+---
+
+## 📬 License
+
+MIT — free to use, modify, and contribute.
